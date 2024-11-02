@@ -1,0 +1,21 @@
+[package]
+name = "rutin_resp3"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ahash = { version = "0.8", optional = true }
+mlua = { version = "0.10", features = ["lua54"], optional = true }
+atoi = "2.0.0"
+bytes = "1.7.2"
+itoa = "1.0.11"
+memchr = "2.7.4"
+num-bigint = "0.4.6"
+ryu = "1.0.18"
+tokio = { version = "1.9", features = ["full"] }
+tokio-util = { version = "0.7", features = ["full"] }
+
+[features]
+default = ["ahash"]
+mlua = ["dep:mlua"]
+ahash = ["dep:ahash"]
